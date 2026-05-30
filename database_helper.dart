@@ -13,9 +13,9 @@ class DatabaseHelper {
   }
 
   Future<Database?> _initDatabase() async {
-  // Get the path to the database file
+    // Get the path to the database file
     String path = await getDatabasesPath() + 'tasks.db';
-  // Open the database, creating it if it doesn't exist
+    // Open the database, creating it if it doesn't exist
     return await openDatabase(
       path,
       version: 1,

@@ -1,5 +1,5 @@
-import 'package:flutter9_bthd/utils/database_helper.dart';
-import 'package:flutter9_bthd/models/task.dart';
+import 'package:flutter9_bttl_1/database_helper.dart';
+import 'package:flutter9_bttl_1/task.dart';
 class TaskController {
   final DatabaseHelper _dbHelper = DatabaseHelper();
 // Insert a new task into the database

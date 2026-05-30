@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter9_bthd/controllers/task_controller.dart';
-import 'package:flutter9_bthd/models/task.dart';
-import 'package:flutter9_bthd/views/task_detail.dart';
+import 'package:flutter9_bttl_1/task_controller.dart';
+import 'package:flutter9_bttl_1/task.dart';
+import 'package:flutter9_bttl_1/task_detail.dart';
 class TaskScreen extends StatefulWidget {
   @override
   _TaskScreenState createState() => _TaskScreenState();
@@ -110,8 +110,17 @@ class _TaskScreenState extends State<TaskScreen> {
                         onPressed: () {},
                       ),
                       onTap: () {
-                        titleController.text = task.title;
-                        descriptionController.text = task.description;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TaskDetailScreen(
+                              task: task,
+                              onUpdate: () {
+                                _fetchTasks(); // Tải lại danh sách sau khi quay về
+                              },
+                            ),
+                          ),
+                        );
                       },
                     ),
                   );

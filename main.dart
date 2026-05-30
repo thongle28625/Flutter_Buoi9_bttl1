@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter9_bthd/views/task_screen.dart';
+import 'package:flutter9_bttl_1/task_screen.dart';
+import 'package:flutter9_bttl_1/task_detail.dart';
 void main() {
   runApp(const MyApp());
 }
